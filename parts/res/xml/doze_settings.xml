@@ -25,23 +25,22 @@
         android:title="@string/ambient_enable" />
 
     <SwitchPreference
-        android:disableDependentsState="true"
         android:key="always_on_display"
-        android:persistent="false"
-        android:icon="@drawable/ic_doze_aod"
+        android:disableDependentsState="true"
+        android:title="@string/ambient_display_always_on_title"
         android:summary="@string/ambient_display_always_on_summary"
-        android:title="@string/ambient_display_always_on_title" />
+        android:persistent="false" />
 
     <PreferenceCategory
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
         <SwitchPreference
-            android:defaultValue="false"
             android:key="gesture_pick_up"
-            android:icon="@drawable/ic_doze_pickup"
-            android:summary="@string/pick_up_gesture_summary"
-            android:title="@string/pick_up_gesture_title" />
+            android:defaultValue="false"
+            android:icon="@drawable/ic_pickup"
+            android:title="@string/pick_up_gesture_title"
+            android:summary="@string/pick_up_gesture_summary" />
 
     </PreferenceCategory>
 
@@ -50,18 +49,18 @@
         android:title="@string/proximity_sensor_title">
 
         <SwitchPreference
-            android:defaultValue="false"
-            android:icon="@drawable/ic_doze_hand"
             android:key="gesture_hand_wave"
-            android:summary="@string/hand_wave_gesture_summary"
-            android:title="@string/hand_wave_gesture_title" />
+            android:defaultValue="false"
+            android:icon="@drawable/ic_hand"
+            android:title="@string/hand_wave_gesture_title"
+            android:summary="@string/hand_wave_gesture_summary" />
 
         <SwitchPreference
-            android:defaultValue="false"
-            android:icon="@drawable/ic_doze_pocket"
             android:key="gesture_pocket"
-            android:summary="@string/pocket_gesture_summary"
-            android:title="@string/pocket_gesture_title" />
+            android:defaultValue="false"
+            android:icon="@drawable/ic_pocket"
+            android:title="@string/pocket_gesture_title"
+            android:summary="@string/pocket_gesture_summary" />
 
     </PreferenceCategory>
 

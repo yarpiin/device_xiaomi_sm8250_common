@@ -24,31 +24,42 @@
         android:title="@string/dirac_enable" />
 
     <ListPreference
-        android:defaultValue="0"
+        android:key="dirac_headset_pref"
         android:entries="@array/dirac_headset_pref_entries"
         android:entryValues="@array/dirac_headset_pref_values"
-        android:key="dirac_headset_pref"
-        android:summary="%s"
-        android:title="@string/dirac_headset_title" />
+        android:defaultValue="0"
+        android:title="@string/dirac_headset_title"
+        android:summary="%s" 
+        android:icon="@drawable/ic_dirac_headphone" />
 
     <ListPreference
-        android:defaultValue="0,0,0,0,0,0,0"
+        android:key="dirac_preset_pref"
         android:entries="@array/dirac_preset_pref_entries"
         android:entryValues="@array/dirac_preset_pref_values"
-        android:key="dirac_preset_pref"
-        android:summary="%s"
-        android:title="@string/dirac_preset_title" />
+        android:defaultValue="0,0,0,0,0,0,0"
+        android:title="@string/dirac_preset_title"
+        android:summary="%s" 
+        android:icon="@drawable/ic_dirac_preset" />
 
+    <ListPreference
+        android:key="scenario_selection"
+        android:entries="@array/scenario_selector_titles"
+        android:entryValues="@array/scenario_selector_values"
+        android:defaultValue="4"
+        android:title="@string/music_headset_scenario_select"
+        android:summary="%s"
+        android:icon="@drawable/ic_scenes" />
 
     <PreferenceCategory
         android:key="dirac_hifi"
         android:title="@string/dirac_hifi_title">
 
         <SwitchPreference
-            android:defaultValue="false"
             android:key="dirac_hifi_pref"
+            android:defaultValue="false"
+            android:title="@string/dirac_hifi_enable_title"
             android:summary="@string/dirac_hifi_summary"
-            android:title="@string/dirac_hifi_enable_title" />
+            android:icon="@drawable/ic_hifi" />
 
     </PreferenceCategory>
 
