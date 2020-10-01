@@ -19,4 +19,7 @@
     <!--  Maximum number of supported users -->
      <integer name="config_multiuserMaximumUsers">4</integer>
 
+    <!-- Display has physical cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
 </resources>
