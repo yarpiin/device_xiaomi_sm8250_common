@@ -7,6 +7,10 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
