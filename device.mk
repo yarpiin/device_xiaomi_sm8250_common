@@ -7,6 +7,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
+# A/B
+AB_OTA_UPDATER := false
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
