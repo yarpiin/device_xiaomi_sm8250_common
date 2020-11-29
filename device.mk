@@ -46,6 +46,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Init
+PRODUCT_PACKAGES += \
+    init.mi_thermald.rc
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_umi
