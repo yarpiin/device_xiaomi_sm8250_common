@@ -13,6 +13,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
+-include $(LOCAL_PATH)/product_prop.mk
+-include $(LOCAL_PATH)/system_prop.mk
+
+# Product Specific flags
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 # A/B
 AB_OTA_UPDATER := false
 
@@ -118,8 +128,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_SHIPPING_API_LEVEL := 29
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
