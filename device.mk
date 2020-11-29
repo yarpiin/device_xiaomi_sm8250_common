@@ -45,6 +45,13 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
+PRODUCT_PACKAGES += \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.kona
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
