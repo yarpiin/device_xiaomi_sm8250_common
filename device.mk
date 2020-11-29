@@ -7,6 +7,10 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti
