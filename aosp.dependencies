@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_umi",
+    "target_path": "device/xiaomi/umi"
+  }
+]
