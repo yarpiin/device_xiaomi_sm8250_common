@@ -24,6 +24,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system \
+    libvulkan
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
