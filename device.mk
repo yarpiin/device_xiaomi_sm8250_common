@@ -11,3 +11,5 @@ $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosp
+
+PRODUCT_SHIPPING_API_LEVEL := 29
