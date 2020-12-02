@@ -7,3 +7,6 @@ persist.vendor.bt.a2dp.aac_whitelist=false
 
 #Camera Support
 vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCamera
+
+#Density
+ro.sf.lcd_density=380
