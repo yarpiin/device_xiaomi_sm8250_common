@@ -26,6 +26,15 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # A/B
 AB_OTA_UPDATER := false
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    libaacwrapper \
+    tinymix
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
