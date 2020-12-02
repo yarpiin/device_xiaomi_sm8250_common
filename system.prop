@@ -1,0 +1,96 @@
+# Audio
+audio.offload.min.duration.secs=30
+persist.vendor.audio.hac.enable=false
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+qcom.hw.aac.encoder=true
+
+# Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist=false
+ro.bluetooth.library_name=libbluetooth_qti.so
+
+# Camera
+camera.disable_zsl_mode=true
+
+# Display
+debug.gralloc.gfx_ubwc_disable=0
+debug.sf.enable_hwc_vds=1
+debug.sf.latch_unsignaled=1
+persist.vendor.color.matrix=2
+ro.vendor.display.ad=1
+ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
+ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+ro.vendor.display.sensortype=2
+sys.displayfeature.hbm.enable=true
+ro.vendor.bl.poll=true
+ro.eyecare.brightness.threshold=11
+ro.eyecare.brightness.level=5
+ro.displayfeature.histogram.enable
+ro.hist.brightness.threshold=7
+vendor.display.use_smooth_motion=1
+ro.vendor.dfps.enable=true
+
+# CNE
+persist.vendor.cne.feature=1
+
+#DALVIK
+dalvik.vm.heapsize=36m
+dev.pm.dyn_samplingrate=1
+
+# DPM
+persist.vendor.dpm.feature=9
+
+#FP
+ro.fingerprint.cleanup.unused=false
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# IOP
+vendor.iop.enable_prefetch_ofr=1
+vendor.iop.enable_uxe=0
+
+# Media
+media.settings.xml=/system/etc/media_profiles_vendor.xml
+
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+#Netflix custom property
+ro.netflix.bsp_rev=Q8250-19134-1
+
+# Perf
+ro.vendor.qti.core_ctl_max_cpu=4
+ro.vendor.qti.core_ctl_min_cpu=2
+vendor.display.enable_async_powermode
+
+# Touchscreen
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.6
+
+# Netmgr
+persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
+
+#RIL
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+#rild.libargs=-d /dev/smd0
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
+ro.telephony.default_network=22,22
+telephony.lteOnCdmaDevice=1
+
+# RCS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=1
+
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Vendor
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+ro.vendor.qti.va_aosp.support=1
