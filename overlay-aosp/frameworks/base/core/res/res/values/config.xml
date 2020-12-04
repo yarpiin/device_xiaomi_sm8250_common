@@ -19,6 +19,13 @@
     <!--  Maximum number of supported users -->
      <integer name="config_multiuserMaximumUsers">4</integer>
 
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 
