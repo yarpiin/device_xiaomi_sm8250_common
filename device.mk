@@ -80,7 +80,9 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.recovery.qcom.rc
+    init.recovery.qcom.rc \
+    init.safailnet.rc \
+    init.mi_thermald.rc
 
 # Input
 PRODUCT_COPY_FILES += \
