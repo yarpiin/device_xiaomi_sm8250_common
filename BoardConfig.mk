@@ -182,5 +182,8 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 # VNDK
 BOARD_VNDK_VERSION := current
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/umi/BoardConfigVendor.mk
