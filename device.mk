@@ -129,6 +129,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.powershare@1.0-service.xiaomi_kona
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
