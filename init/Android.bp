@@ -17,6 +17,7 @@ cc_library_static {
     name: "libinit_umi",
     srcs: ["init_umi.cpp"],
     recovery_available: true,
+    whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
