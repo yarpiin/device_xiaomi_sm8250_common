@@ -29,7 +29,7 @@
 
 #define TOUCH_FOD_ENABLE 10
 
-#define FOD_SENSOR_X 441
+#define FOD_SENSOR_X 445
 #define FOD_SENSOR_Y 1808
 #define FOD_SENSOR_SIZE 197
 
