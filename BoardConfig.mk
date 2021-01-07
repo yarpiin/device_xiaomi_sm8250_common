@@ -18,7 +18,11 @@ BOARD_VENDOR := xiaomi
 
 BUILD_BROKEN_DUP_RULES := true
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 DEVICE_PATH := device/xiaomi/umi
+
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := umi
@@ -40,6 +44,12 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 TARGET_USES_64_BIT_BINDER := true
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
@@ -50,8 +60,12 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 TARGET_EXCLUDES_AUDIOFX := true
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+# Battery
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+HEALTHD_USE_BATTERY_INFO := true
+
+# Bluetooth
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
@@ -59,6 +73,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -73,19 +88,19 @@ ifeq ($(HOST_OS),linux)
     endif
 endif
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
 
 # Display
 TARGET_USES_HWC2 := true
 TARGET_HAS_HDR_DISPLAY := true
+
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_umi
@@ -95,7 +110,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_umi
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
@@ -116,7 +130,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 # Platform
@@ -185,8 +198,6 @@ TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
-BOARD_AVB_VBMETA_SYSTEM := system
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
@@ -197,9 +208,6 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VNDK
 BOARD_VNDK_VERSION := current
-
-# Enable real time lockscreen charging current values
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/umi/BoardConfigVendor.mk
