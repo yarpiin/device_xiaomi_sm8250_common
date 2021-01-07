@@ -126,9 +126,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_umi
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
