@@ -25,7 +25,12 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-<manifest version="1.0" type="framework">
+<!--
+    Input:
+        manifest.xml
+        framework_manifest.xml
+-->
+<manifest version="2.0" type="framework">
     <hal format="hidl">
         <name>vendor.lineage.biometrics.fingerprint.inscreen</name>
         <transport>hwbinder</transport>
@@ -34,6 +39,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IFingerprintInscreen</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IFingerprintInscreen/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.powershare</name>
@@ -43,14 +49,21 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IPowerShare</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IPowerShare/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.touchfeature</name>
+        <name>vendor.qti.hardware.radio.atcmdfwd</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ITouchFeature</name>
-            <instance>default</instance>
+            <name>IAtCmdFwd</name>
+            <instance>AtCmdFwdService</instance>
         </interface>
+        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
     </hal>
+    <system-sdk>
+        <version>28</version>
+        <version>29</version>
+        <version>30</version>
+    </system-sdk>
 </manifest>
