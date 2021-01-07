@@ -22,8 +22,8 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libhardware",
+        "libhidlbase",
         "liblog",
-        "libhwbinder",
         "libutils",
         "vendor.lineage.powershare@1.0",
     ],
