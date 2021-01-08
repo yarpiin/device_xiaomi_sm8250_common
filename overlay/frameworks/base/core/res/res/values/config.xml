@@ -239,6 +239,19 @@
     <!-- Flag specifying whether VT is available on device -->
      <bool name="config_device_vt_available">true</bool>
 
+    <!-- Package name for the call-based number verification app -->
+    <string name="platform_number_verification_package" translatable="false">com.google.android.gms</string>
+
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- The Google provider -->
+        <item>com.google.android.gms</item>
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+    </string-array>
+    
+    <!-- Flag indicating which package name can access the persistent data partition -->
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+
 <!-- Screen. -->
 
     <!-- The bounding path of the cutout region of the main built-in display.
