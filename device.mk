@@ -10,6 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/umi/umi-vendor.mk)
 
@@ -34,8 +38,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat
 
-# A/B
-AB_OTA_UPDATER := false
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -51,10 +56,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_engine_configuration.xml
-
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -81,7 +82,12 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData \
     libqdMetaData.system \
-    libvulkan
+    libvulkan \
+    vendor.display.config@1.0
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
@@ -123,14 +129,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# Fastbootd
+# NFC
 PRODUCT_PACKAGES += \
-    fastbootd
-
-# Init
-PRODUCT_PACKAGES += \
-    init.mi_thermald.rc
-
+    com.android.nfc_extras \
+    com.gsma.services.nfc \
+    NfcNci \
+    SecureElement \
+    Tag
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -173,7 +178,6 @@ PRODUCT_HOST_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi \
     vendor/nxp/opensource/sn100x
 
 # Telephony
@@ -201,7 +205,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl
