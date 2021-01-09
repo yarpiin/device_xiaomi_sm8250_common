@@ -1,6 +1,6 @@
 Copyright (C) 2020 LineageOs
 
-Device configuration for Xiaomi MI 10
+Device configuration for Xiaomi MI 10 - Android 11
 =========================================
 
 The Xiaomi MI 10 (codenamed _"umi"_) is a high-end smartphone from Xiaomi.
@@ -24,3 +24,5 @@ Camera  | 108MP(Primary) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Te
 ## Device picture
 
 ![Xiaomi MI 10 5G ](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-10-pro-5g-1.jpg "Xiaomi MI 10 5G")
+
+Tree based on work of @dataoutputstream and @markakash - all credits belong to them.
