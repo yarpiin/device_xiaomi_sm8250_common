@@ -133,9 +133,9 @@ void vendor_load_properties() {
     };
 
     property_override("ro.oem_unlock_supported", "0");
-    property_override("ro.build.description", "redfinl-user 11 RQ1A.201205.010 6953398 release-keys");
+    property_override("ro.build.description", "redfin-user 11 RQ1A.210105.003 7005429 release-keys");
     property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.bootimage.build.fingerprint",
-	    "ro.vendor.build.fingerprint", "ro.odm.build.fingerprint", "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys");
+	    "ro.vendor.build.fingerprint", "ro.odm.build.fingerprint", "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys");
 
     // Workaround SafetyNet
     workaround_snet_properties();
