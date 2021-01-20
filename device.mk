@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl.kona
+
 # Media
 PRODUCT_PACKAGES += \
     libmediaplayerservice
