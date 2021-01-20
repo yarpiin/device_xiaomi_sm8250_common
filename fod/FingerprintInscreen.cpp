@@ -31,7 +31,7 @@
 
 #define FOD_SENSOR_X 441
 #define FOD_SENSOR_Y 1808
-#define FOD_SENSOR_SIZE 220
+#define FOD_SENSOR_SIZE 197
 
 #define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
 #define FINGERPRINT_ACQUIRED_VENDOR 6
