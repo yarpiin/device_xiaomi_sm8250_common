@@ -80,11 +80,14 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
+    libdisplayconfig.qti \
+    libgralloc.qti \
     libqdMetaData \
     libqdMetaData.system \
     libvulkan \
-    vendor.display.config@1.0
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.composer@3.0
 
 # Fastbootd
 PRODUCT_PACKAGES += \
