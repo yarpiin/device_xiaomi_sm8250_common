@@ -98,7 +98,4 @@
     <integer name="config_sysCPUTempMultiplier">1000</integer>
     <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
 
-    <!-- Shows the required view for in-display fingerprint -->
-    <bool name="config_supportsInDisplayFingerprint">true</bool>
-
 </resources>
