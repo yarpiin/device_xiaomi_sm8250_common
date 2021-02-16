@@ -2,8 +2,6 @@
 # ANT
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-system/lib/libantradio.so
-system/lib64/libantradio.so
 
 # Alarm
 -system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
@@ -116,6 +114,11 @@ system_ext/lib64/vendor.qti.gnss@2.1.so
 system_ext/lib64/vendor.qti.gnss@3.0.so
 system_ext/lib64/vendor.qti.gnss@4.0.so
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
 # Latency
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 -system_ext/framework/vendor.qti.latency-V2.0-java.jar
@@ -163,8 +166,6 @@ system_ext/lib64/vendor.display.color@1.1.so
 system_ext/lib64/vendor.display.color@1.2.so
 system_ext/lib64/vendor.display.color@1.3.so
 system_ext/lib64/vendor.display.postproc@1.0.so
-
-
 
 # QMI
 system_ext/etc/permissions/qti_libpermissions.xml
@@ -254,8 +255,8 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 -system_ext/priv-app/ims/ims.apk
 
 # Soundfx - from LA.UM.8.9.r1-08400-SM6xx.0
-vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so:|672ad577dab5221bdd7f840d87313e3483aebde0
-vendor/li645/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|c25cc5e8c3622eb97d3bb4814aeb301c01d8b046
+vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib/soundfx/libvolumelistener.so:|672ad577dab5221bdd7f840d87313e3483aebde0
+vendor/li645/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib64/soundfx/libvolumelistener.so|c25cc5e8c3622eb97d3bb4814aeb301c01d8b046
 
 # SCVE
 system_ext/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
@@ -439,7 +440,6 @@ system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/spn-conf.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 -system_ext/framework/ActivityExt.jar
--system_ext/framework/com.android.hotwordenrollment.common.util.jar
 -system_ext/framework/com.qti.media.secureprocessor.jar
 -system_ext/framework/qmapbridge.jar
 -system_ext/framework/qti-telephony-hidl-wrapper.jar
