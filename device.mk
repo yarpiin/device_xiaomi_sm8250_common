@@ -115,7 +115,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
-    init.safailnet.rc \
     init.mi_thermald.rc
 
 # Input
