@@ -253,6 +253,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.kona \
+    android.hardware.lights-service.qti
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
