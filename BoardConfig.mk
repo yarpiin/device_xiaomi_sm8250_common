@@ -108,9 +108,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_kona
-#TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_kona
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_umi
+TARGET_RECOVERY_DEVICE_MODULES := libinit_umi
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2019 The LineageOS Project
+// Copyright (C) 2019-2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,12 +15,11 @@
 //
 
 cc_library_static {
-    name: "libinit_kona",
+    name: "libinit_umi",
+    srcs: ["init_umi.cpp"],
     recovery_available: true,
-    shared_libs: ["libbase"],
-    srcs: ["init_kona.cpp"],
     include_dirs: [
-        "system/core/base/include",
-        "system/core/init"
-    ]
+        "system/core/init",
+    ],
+    shared_libs: ["libbase"],
 }
