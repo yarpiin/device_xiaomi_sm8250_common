@@ -1,6 +1,21 @@
 [
-  {
-    "repository": "android_device_umi",
-    "target_path": "device/xiaomi/umi"
-  }
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/kernel_xiaomi_sm8250",
+        "target_path"  : "kernel/xiaomi/sm8250",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/vendor_xiaomi_umi",
+        "target_path"  : "vendor/xiaomi/umi",
+        "branch"       : "elle"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/android_device_xiaomi_umi",
+        "target_path"  : "device/xiaomi/umi",
+        "branch"       : "los-18.1_OSS"
+    }
+    
 ]
