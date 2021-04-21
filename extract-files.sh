@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE_COMMON=sm8250-common
+DEVICE=umi
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -52,8 +52,8 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-# Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
+# Initialize the helper for device
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
