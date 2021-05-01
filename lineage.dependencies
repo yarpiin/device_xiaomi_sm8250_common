@@ -16,6 +16,12 @@
         "repository"   : "yarpiin/android_device_xiaomi_umi",
         "target_path"  : "device/xiaomi/umi",
         "branch"       : "los-18.1_OSS"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "LineageOS/android_hardware_xiaomi",
+        "target_path"  : "hardware/xiaomi",
+        "branch"       : "lineage-18.1"
     }
     
 ]
