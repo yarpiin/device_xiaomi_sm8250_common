@@ -80,4 +80,9 @@
     -->
     <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
+     <!-- Smart charging -->
+     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
+     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
 </resources>
