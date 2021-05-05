@@ -16,6 +16,9 @@
     <!-- Show a custom view for FOD -->
     <bool name="config_needCustomFODView">true</bool>
 
+    <!-- Default fod pressed color -->
+    <integer name="config_fod_pressed_color">0</integer>
+
       <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
