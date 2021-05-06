@@ -65,7 +65,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore\
     android.hardware.configstore@1.1
-    
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey
 
 # Display
 $(call inherit-product, $(LOCAL_PATH)/kona/display/display.mk)
