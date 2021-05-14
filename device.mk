@@ -363,6 +363,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
+
+# Sounds
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Ganymede.ogg \
+    ro.config.notification_sound=Carme.ogg \
+    ro.config.alarm_alert=Argon.ogg
     
 # Telephony
 PRODUCT_PACKAGES += \
