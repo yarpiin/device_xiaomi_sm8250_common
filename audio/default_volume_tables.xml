@@ -30,14 +30,14 @@
         <point>1,-2400</point>
         <point>33,-2100</point>
         <point>66,-1900</point>
-        <point>100,-1200</point>
+        <point>100,0</point>
     </reference>
     <reference name="DEFAULT_MEDIA_VOLUME_CURVE">
     <!-- Default Media reference Volume Curve -->
         <point>1,-5800</point>
         <point>20,-4000</point>
         <point>60,-2100</point>
-        <point>100,-1200</point>
+        <point>100,0</point>
     </reference>
     <reference name="DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE">
     <!--Default Volume Curve -->
