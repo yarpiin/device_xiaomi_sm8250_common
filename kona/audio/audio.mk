@@ -91,7 +91,6 @@ PRODUCT_PACKAGES += \
     libvisualizer \
     libvolumelistener \
     libaudiozoom \
-    tinymix \
     tinyplay \
     libtinycompress
 
