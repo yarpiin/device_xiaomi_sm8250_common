@@ -851,6 +851,11 @@
         <item>420</item>
     </array>
 
+<!-- Led. -->
+
+    <!-- Whether device has notification LED -->
+    <bool name="config_hasNotificationLed">false</bool>
+
 <!-- Doze. -->
 
     <!-- Control whether the always on display mode is available. This should only be enabled on
