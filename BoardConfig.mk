@@ -96,6 +96,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Display
+TARGET_SCREEN_DENSITY := 380
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
