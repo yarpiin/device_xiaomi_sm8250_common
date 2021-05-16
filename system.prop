@@ -15,7 +15,6 @@ persist.vendor.cp.fcc_main_ua=400000
 persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
 
 # Display
-ro.sf.lcd_density=440 
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
