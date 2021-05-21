@@ -343,7 +343,6 @@ PRODUCT_PACKAGES += \
     qca6234-service.sh \
 
 PRODUCT_PACKAGES += \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
