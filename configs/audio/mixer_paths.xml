@@ -420,9 +420,9 @@
     <ctl name="TX_DEC6 Volume" value="92" />
     <ctl name="TX_DEC7 Volume" value="92" />
 
-    <ctl name="ADC1 Volume" value="12" />
-    <ctl name="ADC2 Volume" value="12" />
-    <ctl name="ADC3 Volume" value="12" />
+    <ctl name="ADC1 Volume" value="16" />
+    <ctl name="ADC2 Volume" value="16" />
+    <ctl name="ADC3 Volume" value="16" />
 
     <!-- Compander controls -->
     <ctl name="WSA_COMP1 Switch" value="0" />
@@ -2622,7 +2622,7 @@
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC4_MIXER Switch" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
-        <ctl name="ADC4 Volume" value="12" />
+        <ctl name="ADC4 Volume" value="16" />
     </path>
 
     <path name="asr-mic">
@@ -2631,13 +2631,13 @@
         <ctl name="TX SMIC MUX0" value="ADC0" />
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC1_MIXER Switch" value="1" />
-        <ctl name="ADC1 Volume" value="14" />
+        <ctl name="ADC1 Volume" value="16" />
         <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
         <ctl name="TX SMIC MUX1" value="ADC3" />
         <ctl name="ADC4_MIXER Switch" value="1" />
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
-        <ctl name="ADC4 Volume" value="14" />
+        <ctl name="ADC4 Volume" value="16" />
     </path>
 
     <!-- Dual MIC devices -->
