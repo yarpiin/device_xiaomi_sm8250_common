@@ -77,16 +77,39 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
      float alpha;
     int realBrightness = get(BRIGHTNESS_PATH, 0);
     
-    if (realBrightness >= 500) {
-        alpha = 1.0 - pow(realBrightness / 2047.0 * 430.0 / 600.0, 0.485);
-    } else if (realBrightness < 500 && realBrightness >=250) {
-        alpha = 1.0 - pow(realBrightness / 2047.0 * 430.0 / 600.0, 0.530);
-    } else if (realBrightness > 60) {
-         alpha = 1.0 - pow(realBrightness / 1680.0, 0.525);
+    if (realBrightness < 1) {
+        alpha = 255;
+    } else if (realBrightness < 14 && realBrightness >1) {
+        alpha = 235;
+    } else if (realBrightness < 31 && realBrightness >13) {
+         alpha = 229;
+    } else if (realBrightness < 69 && realBrightness >30) {
+         alpha = 208;
+    } else if (realBrightness < 134 && realBrightness >68) {
+         alpha = 192;
+    } else if (realBrightness < 219 && realBrightness >133) {
+         alpha = 176;
+    } else if (realBrightness < 329 && realBrightness >218) {
+         alpha = 160;
+    } else if (realBrightness < 487 && realBrightness >328) {
+         alpha = 144;
+    } else if (realBrightness < 643 && realBrightness >486) {
+         alpha = 128;
+    } else if (realBrightness < 833 && realBrightness >642) {
+         alpha = 112;
+    } else if (realBrightness < 1044 && realBrightness >832) {
+         alpha = 96;
+    } else if (realBrightness < 1268 && realBrightness >1043) {
+         alpha = 80;
+    } else if (realBrightness < 1501 && realBrightness >1267) {
+         alpha = 64;
+    } else if (realBrightness < 1771 && realBrightness >1500) {
+         alpha = 48;
     }else{
-        alpha = 1.0 - pow(realBrightness / 1680.0, 0.475);
+        alpha = 33;
     }
-    return 255 * alpha;
+
+    return alpha;
 }
 /**
 
