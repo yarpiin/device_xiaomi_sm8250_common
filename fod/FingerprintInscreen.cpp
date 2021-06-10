@@ -105,6 +105,8 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
          alpha = 64;
     } else if (realBrightness < 1771 && realBrightness >1500) {
          alpha = 48;
+    } else if (realBrightness < 2001 && realBrightness >1770) {
+         alpha = 36;
     }else{
         alpha = 33;
     }
