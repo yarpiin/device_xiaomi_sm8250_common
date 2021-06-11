@@ -42,7 +42,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <!-- Enable CAC control: 0x0: disabled, 0x1:enabled for 8 bit, 0x2:enabled for 10 bit, 0x3:enabled for 8 and 10 bits both -->
         <property name="vidc_enc_bitrate_savings_enable" value="3"/>
         <property name="vidc_enc_auto_blur_disable" value="0"/>
-        <property name="vidc_enc_auto_dynamic_fps_enable" value="1"/>
         <!-- Bitmask 0: RGB565  1: YUV420P 8-bit, 2: YUV420P 10-bit, 3: YUV420p 8&10 bit -->
         <property name="vidc_dec_thumbnail_yuv_output" value="0"/>
         <property name="vidc_enc_quality_boost_enable" value="1"/>
