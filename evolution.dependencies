@@ -23,5 +23,11 @@
         "target_path"  : "hardware/xiaomi",
         "branch"       : "lineage-18.1"
     }
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/vendor_xiaomi_umi_firmware",
+        "target_path"  : "vendor/xiaomi/umi/firmware",
+        "branch"       : "main"
+    }
     
 ]
