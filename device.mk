@@ -162,10 +162,14 @@ PRODUCT_PACKAGES += \
     lights.kona \
     android.hardware.lights-service.qti
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    
+
 # Media
 $(call inherit-product, $(LOCAL_PATH)/kona/media/media.mk)
 
