@@ -644,7 +644,7 @@
        <ctl name="RCV DSP RX2 Source" value="ASPRX1" />
        <ctl name="RCV ASP TX1 Source" value="DSPTX1" />
        <ctl name="RCV ASPTX Ref" value="Ref" />
-       <ctl name="Cirrus SP Usecase Config" value="None" />
+       <ctl name="Cirrus SP Usecase Config" value="Music" />
     </path>
 
     <path name="speaker-mono">
@@ -786,7 +786,7 @@
     </path>
 
     <path name="hph-lowpower-mode">
-        <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+        <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
     </path>
 
     <path name="sidetone-headphones">
