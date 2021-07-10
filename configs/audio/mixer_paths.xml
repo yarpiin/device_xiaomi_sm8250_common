@@ -173,9 +173,9 @@
     <ctl name="VI_FEED_TX Channels" value="Two" />
     <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="0" />
     <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_2" value="0" />
-    <ctl name="WSA_CDC_DMA_RX_0 Format" value="S16_LE" />
-    <ctl name="RX_CDC_DMA_RX_0 Format" value="S16_LE" />
-    <ctl name="TX_CDC_DMA_TX_3 Format" value="S16_LE" />
+    <ctl name="WSA_CDC_DMA_RX_0 Format" value="S24_LE" />
+    <ctl name="RX_CDC_DMA_RX_0 Format" value="S24_LE" />
+    <ctl name="TX_CDC_DMA_TX_3 Format" value="S24_LE" />
     <!-- HFP start -->
     <ctl name="HFP_SLIM7_UL_HL Switch" value="0" />
     <ctl name="WSA_CDC_DMA_RX_0 Port Mixer SLIM_7_TX" value="0" />
@@ -408,23 +408,38 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
-    <ctl name="WSA_RX0 Digital Volume" value="84" />
+    <!-- Cirrus Booster Amp Algorithm Enable/Disable -->
+    <ctl name="Cirrus SP" value="Enable" />
+    <ctl name="Cirrus SP FBPort" value="TERT_MI2S_TX" />
+    <ctl name="Cirrus SP Usecase Config" value="Music" />
+    <!-- Cirrus Booster Amp Algorithm end -->
+    <!-- Cirrus Amp Gain -->
+    <ctl name="Boost Control" value="On" />
+    <ctl name="R Boost Control" value="On" />
+    <ctl name="AMP PCM Gain" value="17" />
+    <ctl name="R AMP PCM Gain" value="17" />
+    <!-- Cirrus Amp Gain end-->
+    <!-- Cirrus Amp Enables -->
+    <ctl name="AMP Enable Switch" value="1" />
+    <ctl name="R AMP Enable Switch" value="1" />
+    <!-- Cirrus Amp Enables end -->
+	<ctl name="WSA_RX0 Digital Volume" value="84" />
     <ctl name="WSA_RX1 Digital Volume" value="84" />
-    <ctl name="RX_RX0 Digital Volume" value="84" />
-    <ctl name="RX_RX1 Digital Volume" value="84" />
+    <ctl name="RX_RX0 Digital Volume" value="79" />
+    <ctl name="RX_RX1 Digital Volume" value="79" />
     <ctl name="RX_RX2 Digital Volume" value="84" />
-    <ctl name="HPHL Volume" value="18" />
-    <ctl name="HPHR Volume" value="18" />
+    <ctl name="HPHL Volume" value="20" />
+    <ctl name="HPHR Volume" value="20" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="TX_DEC0 Volume" value="92" />
-    <ctl name="TX_DEC1 Volume" value="92" />
-    <ctl name="TX_DEC2 Volume" value="92" />
-    <ctl name="TX_DEC3 Volume" value="92" />
-    <ctl name="TX_DEC4 Volume" value="92" />
-    <ctl name="TX_DEC5 Volume" value="92" />
-    <ctl name="TX_DEC6 Volume" value="92" />
-    <ctl name="TX_DEC7 Volume" value="92" />
+    <ctl name="TX_DEC0 Volume" value="102" />
+    <ctl name="TX_DEC1 Volume" value="90" />
+    <ctl name="TX_DEC2 Volume" value="90" />
+    <ctl name="TX_DEC3 Volume" value="90" />
+    <ctl name="TX_DEC4 Volume" value="84" />
+    <ctl name="TX_DEC5 Volume" value="84" />
+    <ctl name="TX_DEC6 Volume" value="84" />
+    <ctl name="TX_DEC7 Volume" value="84" />
 
     <ctl name="ADC1 Volume" value="16" />
     <ctl name="ADC2 Volume" value="16" />
@@ -438,7 +453,7 @@
 
     <!-- Headphone class-H mode -->
     <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
-    <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+    <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
 
     <!-- IIR/voice anc -->
     <ctl name="IIR0 Band1" id ="0" value="268435456" />
@@ -3059,7 +3074,8 @@
         <path name="amic2" />
     </path>
     <path name="voice-handset">
-        <path name="handset" />
+        <ctl name="Cirrus SP Usecase Config" value="Voice" />
+		<path name="handset" />
     </path>
 
     <path name="voice-handset-tmus">
@@ -3074,7 +3090,8 @@
         <path name="handset" />
     </path>
     <path name="voice-speaker">
-        <path name="speaker-mono" />
+        <ctl name="Cirrus SP Usecase Config" value="Voice" />
+		<path name="speaker-mono" />
     </path>
 
     <path name="voice-speaker-stereo">
