@@ -753,6 +753,7 @@ vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 -vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/vendor.qti.hardware.display.composer@3.0.so
 
 # Display (SDM)
