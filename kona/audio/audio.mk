@@ -256,9 +256,6 @@ vendor.audio.volume.headset.gain.depcal=true
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.audio.fluence.voicecomm=true
 
-
-USE_XML_AUDIO_POLICY_CONF := 1
-
 #enable keytone FR
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.hal.output.suspend.supported=true
