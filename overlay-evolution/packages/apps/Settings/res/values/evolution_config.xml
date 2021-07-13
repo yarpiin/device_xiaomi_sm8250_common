@@ -24,6 +24,9 @@
     <!-- Device specific doze package -->
     <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
 
+    <!-- Adaptive Charging -->
+    <bool name="config_supportAdaptiveCharging">true</bool>
+
     <!-- Battery Health -->
     <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
     <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
@@ -31,6 +34,6 @@
     <bool name="config_supportBatteryHealth">true</bool>
 
     <!-- Screen off FOD -->
-    <bool name="config_supportScreenOffFod">true</bool>
+    <bool name="config_supportScreenOffFod">false</bool>
 
 </resources>
