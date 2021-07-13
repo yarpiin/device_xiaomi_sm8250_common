@@ -15,7 +15,7 @@
         "remote"       : "github",
         "repository"   : "yarpiin/android_device_xiaomi_umi",
         "target_path"  : "device/xiaomi/umi",
-        "branch"       : "los-18.1_OSS"
+        "branch"       : "EvolutionX_OSS"
     },
     { 
         "remote"       : "github",
@@ -24,7 +24,7 @@
         "branch"       : "lineage-18.1"
     }
     { 
-        "remote"       : "github",
+        "remote"       : "gitlab",
         "repository"   : "yarpiin/vendor_xiaomi_umi_firmware",
         "target_path"  : "vendor/xiaomi/umi/firmware",
         "branch"       : "main"

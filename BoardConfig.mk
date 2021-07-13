@@ -254,4 +254,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit from the proprietary version
--include vendor/xiaomi/sm8250-common/BoardConfigVendor.mk
+-include vendor/xiaomi/umi/BoardConfigVendor.mk
