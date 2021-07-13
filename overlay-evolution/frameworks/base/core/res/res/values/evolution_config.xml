@@ -50,4 +50,21 @@
     <string name="config_adaptiveChargingSuspendValue" translatable="false">1</string>
     <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
 
+    <!-- Should we filter any display modes which are unampped? -->
+    <bool name="config_filterDisplayModes">true</bool>
+
+    <!-- Display mode remapping table.
+        If the mode names returned by the backend do not match
+        the predefined and translated strings in the Settings
+        app, they can be remapped here. The format is
+        "oldname:newname", one per entry. -->
+    <string-array name="config_displayModeMappings" translatable="false">
+        <item>standard:Standard</item>
+        <item>hal_native:Natural</item>
+        <item>smart_MC:Adaptive</item>
+        <item>vivid:Saturated</item>
+        <item>hal_srgb:srgb</item>
+        <item>video1:Movie</item>
+    </string-array>
+
 </resources>
