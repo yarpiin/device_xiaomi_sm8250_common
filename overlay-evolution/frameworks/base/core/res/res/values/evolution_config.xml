@@ -73,4 +73,7 @@
         <item>video1:Movie</item>
     </string-array>
 
+    <!-- Pocket Lock -->
+    <bool name="config_pocketUseLightSensor">false</bool>
+
 </resources>
