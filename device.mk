@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    CameraGo
+    Snap
 
 # Configstore
 PRODUCT_PACKAGES += \
