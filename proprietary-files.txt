@@ -767,6 +767,11 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
 # Display-calibration
+vendor/etc/mdss_dsi_j2_38_0c_0a_dsc_cmd_mi.xml
+vendor/etc/mdss_dsi_j2_42_02_0b_dsc_cmd_mi.xml
+vendor/etc/mdss_dsi_j2_mp_42_02_0b_dsc_cmd_mi.xml
+vendor/etc/mdss_dsi_j2_p2_1_38_0c_0a_dsc_cmd_mi.xml
+vendor/etc/mdss_dsi_j2_p2_1_42_02_0b_dsc_cmd_mi.xml
 vendor/etc/ltm_config_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/ltm_config_xiaomi_42_02_0b_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/qdcm_calib_data_nt35597_cmd_mode_dsi_truly_panel_with_DSC.xml
