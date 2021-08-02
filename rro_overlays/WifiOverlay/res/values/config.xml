@@ -47,5 +47,8 @@
 
     <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
     <bool translatable="false" name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">false</bool>
+
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Mi10</string>
 </resources>
 
