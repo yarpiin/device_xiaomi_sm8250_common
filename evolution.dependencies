@@ -7,15 +7,45 @@
     },
     { 
         "remote"       : "github",
-        "repository"   : "yarpiin/vendor_xiaomi_umi",
-        "target_path"  : "vendor/xiaomi/umi",
-        "branch"       : "elle"
+        "repository"   : "yarpiin/xiaomi_sm8250_common",
+        "target_path"  : "device/xiaomi/sm8250-common",
+        "branch"       : "EvolutionX_OSS"
     },
     { 
         "remote"       : "github",
-        "repository"   : "yarpiin/android_device_xiaomi_umi",
+        "repository"   : "yarpiin/device_xiaomi_umi",
         "target_path"  : "device/xiaomi/umi",
-        "branch"       : "EvolutionX_OSS"
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/device_xiaomi_cmi",
+        "target_path"  : "device/xiaomi/cmi",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_umi",
+        "target_path"  : "vendor/xiaomi/umi",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_cmi",
+        "target_path"  : "vendor/xiaomi/cmi",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_umi_firmware",
+        "target_path"  : "vendor/xiaomi/umi/firmware",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_cmi_firmware",
+        "target_path"  : "vendor/xiaomi/cmi/firmware",
+        "branch"       : "main"
     },
     { 
         "remote"       : "github",
@@ -23,11 +53,4 @@
         "target_path"  : "hardware/xiaomi",
         "branch"       : "lineage-18.1"
     }
-    { 
-        "remote"       : "gitlab",
-        "repository"   : "yarpiin/vendor_xiaomi_umi_firmware",
-        "target_path"  : "vendor/xiaomi/umi/firmware",
-        "branch"       : "main"
-    }
-    
 ]
