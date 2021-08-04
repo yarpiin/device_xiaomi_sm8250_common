@@ -17,9 +17,9 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-DEVICE_PATH := device/xiaomi/umi
+COMMON_PATH := device/xiaomi/sm8250-common
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Architecture
 TARGET_ARCH := arm64
@@ -37,12 +37,6 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 TARGET_USES_64_BIT_BINDER := true
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := umi
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
@@ -70,9 +64,9 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 # Kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := vendor/umi_user_defconfig
+
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -103,22 +97,18 @@ TARGET_SCREEN_DENSITY := 380
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.kona
+TARGET_SURFACEFLINGER_FOD_LIB := //$(COMMON_PATH):libfod_extension.kona
 
 # HIDL
 DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/vintf/manifest.xml \
-    $(DEVICE_PATH)/vintf/c2_manifest.xml
+    $(COMMON_PATH)/vintf/manifest.xml \
+    $(COMMON_PATH)/vintf/c2_manifest.xml
 
 DEVICE_MATRIX_FILE := \
-    $(DEVICE_PATH)/vintf/compatibility_matrix.xml
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_umi
-TARGET_RECOVERY_DEVICE_MODULES := libinit_umi
+    $(COMMON_PATH)/vintf/compatibility_matrix.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -166,19 +156,16 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # Properties
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USES_MKE2FS := true
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -188,9 +175,9 @@ USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_M4DEFS += \
     debugfs_clk=vendor_debugfs_clk \
     debugfs_ipc=vendor_debugfs_ipc \
@@ -258,6 +245,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
-
-# Inherit from the proprietary version
--include vendor/xiaomi/umi/BoardConfigVendor.mk

@@ -1,11 +1,10 @@
 Copyright (C) 2020 LineageOs
 
-Device configuration for Xiaomi MI 10 - Android 11
+Common tre  configuration for Xiaomi MI 10 / Mi 10 Pro - Android 11
 =========================================
 
-The Xiaomi MI 10 (codenamed _"umi"_) is a high-end smartphone from Xiaomi.
+The Xiaomi MI 10 are high-end smartphone from Xiaomi.
 
-It was announced on February 2020. Release date was February 2020.
 
 ## Device specifications
 
@@ -21,8 +20,5 @@ Battery | Non-removable Li-Po 4700 mAh battery
 Display | 1080 x 2340 pixels, 19.5:9 ratio, 6.67 inches, AMOLED HDR10+
 Camera  | 108MP(Primary) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Telephoto 5x Hybrid zoom)
 
-## Device picture
-
-![Xiaomi MI 10 5G ](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-10-pro-5g-1.jpg "Xiaomi MI 10 5G")
 
 Tree based on work of @dataoutputstream - all credits belong to him.
