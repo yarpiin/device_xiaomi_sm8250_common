@@ -275,7 +275,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml \
     device/xiaomi/sm8250-common/configs/permission/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml  
-    
+
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Power Hal
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
