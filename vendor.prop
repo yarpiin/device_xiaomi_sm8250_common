@@ -233,7 +233,6 @@ vendor.mm.enable.qcom_parser=16777215
 #Others
 ro.config.vc_call_vol_steps=11 
 ro.control_privapp_permissions=enforce 
-ro.vendor.extension_library=libqti-perfd-client.so 
 ro.incremental.enable=1 
 ro.vendor.nfc.repair=1 
 ro.vendor.qspm.enable=true 
