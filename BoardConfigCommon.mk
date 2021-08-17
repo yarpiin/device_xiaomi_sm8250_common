@@ -48,7 +48,7 @@ BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery kpti=off
 BOARD_KERNEL_CMDLINE += androidboot.selinux=enforcing
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE          := 0x00000000
