@@ -1,3 +1,5 @@
+#Audio target definitions for kona
+
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 AUDIO_FEATURE_ENABLED_DLKM := true
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
@@ -29,7 +31,6 @@ AUDIO_FEATURE_ENABLED_CUSTOMSTEREO := true
 AUDIO_FEATURE_ENABLED_FLUENCE := true
 AUDIO_FEATURE_ENABLED_HDMI_EDID := true
 AUDIO_FEATURE_ENABLED_HDMI_PASSTHROUGH := true
-#AUDIO_FEATURE_ENABLED_KEEP_ALIVE := true
 AUDIO_FEATURE_ENABLED_DISPLAY_PORT := true
 AUDIO_FEATURE_ENABLED_HFP := true
 AUDIO_FEATURE_ENABLED_INCALL_MUSIC := true
@@ -41,8 +42,6 @@ AUDIO_FEATURE_ENABLED_USB_BURST_MODE := true
 AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 AUDIO_FEATURE_ENABLED_BATTERY_LISTENER := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
-#AUDIO_FEATURE_ENABLED_3D_AUDIO := true
-##AUDIO_FEATURE_FLAGS
 AUDIO_FEATURE_ENABLED_CONCURRENT_CAPTURE := true
 AUDIO_FEATURE_ENABLED_COMPRESS_INPUT := true
 AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := false
@@ -51,8 +50,6 @@ AUDIO_FEATURE_ENABLED_DYNAMIC_ECNS := true
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_SOURCE_TRACKING := true
 AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
-
-
 
 # for HIDL related packages
 PRODUCT_PACKAGES += \
@@ -94,18 +91,7 @@ PRODUCT_PACKAGES += \
     tinyplay \
     libtinycompress
 
-PRODUCT_PACKAGES += \
-	capture.sh \
-	capture_headset.sh\
-	playback.sh\
-	playback_headset.sh\
-	setup_backmic2headphone.sh\
-	setup_backmic2headphone.sh\
-	setup_headsetmic2headphone.sh\
-	setup_mainmic2headphone.sh\
-	setup_topmic2headphone.sh\
-	teardown_loopback.sh
-	
+# Export Configs
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/sm8250-common/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
@@ -151,9 +137,12 @@ vendor.audio.tunnel.encode=false
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.audio.ras.enabled=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.audio.ring.filter.mask=0
+
 #Buffer size in kbytes for compress offload playback
 PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.buffer.size.kb=256
 
 #Enable audio track offload by default
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -196,6 +185,36 @@ vendor.audio.hal.boot.timeout.ms=20000
 #enable pbe effects
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.safx.pbe.enabled=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.gain.support=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.game.effect=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.karaok.support=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.ns.support=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.ring.filter=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.sfx.audiovisual=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.sfx.earadj=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.sfx.scenario=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.sos=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.audio.soundfx.usb=true
 
 #parser input buffer size(256kb) in byte stream mode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -317,7 +336,7 @@ vendor.audio.feature.maxx_audio.enable=false \
 vendor.audio.feature.ras.enable=true \
 vendor.audio.feature.record_play_concurency.enable=false \
 vendor.audio.feature.src_trkn.enable=true \
-vendor.audio.feature.spkr_prot.enable=true \
+vendor.audio.feature.spkr_prot.enable=false \
 vendor.audio.feature.ssrec.enable=true \
 vendor.audio.feature.usb_offload.enable=true \
 vendor.audio.feature.usb_offload_burst_mode.enable=true \
