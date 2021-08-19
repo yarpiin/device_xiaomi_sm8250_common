@@ -48,9 +48,9 @@
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
 
     <!-- Dirac settings -->
-    <string name="dirac_title">Dirac sound enhancer</string>
-    <string name="dirac_headset_title">Headset type</string>
-    <string name="dirac_preset_title">Sound preset</string>
+    <string name="dirac_title">Mi Sound Enhancer</string>
+    <string name="dirac_headset_title">Choose headphones type</string>
+    <string name="dirac_preset_title">Preset</string>
     <string name="dirac_default">Default</string>
 
     <!-- Dirac settings: headset types -->
