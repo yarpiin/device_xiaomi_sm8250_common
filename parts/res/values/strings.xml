@@ -16,7 +16,7 @@
 -->
 <resources>
      <!--    Device specific  -->
-     <string name="device_specific_settings_title">Device-specific settings</string>
+    <string name="device_specific_settings_title">Device-specific settings</string>
     <string name="device_specific_settings_summary">Settings specific to Mi 10</string>
     <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
     <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
@@ -25,6 +25,9 @@
     <string name="dt2w_enable_title">Double-Tap to Wake </string>
     <string name="dt2w_enable_summary">Display boot in screen-off state by a double-tap</string>
 
+    <!--Display settings fragment -->
+    <string name="display_settings_title">Custom Display Settings</string>
+    <string name="display_settings_summary">HBM</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
@@ -84,4 +87,8 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
+    <!-- HBM settings -->
+    <string name="hbm_mode_title">High Brightness Mode</string>
+    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
+    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 </resources>
