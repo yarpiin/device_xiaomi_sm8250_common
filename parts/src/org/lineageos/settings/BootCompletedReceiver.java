@@ -27,16 +27,22 @@ import android.content.pm.PackageManager;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.utils.FileUtils;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.fod.FodUtils;
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 
+
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
+    private static final String HBM_ENABLE_KEY = "hbm_mode";
+    private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     public static final String SHAREDD2TW = "sharadeD2TW";
     private ITouchFeature mTouchFeature;
     @Override
@@ -71,5 +77,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         FodUtils.startService(context);
         ThermalUtils.startService(context);
 
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
+        FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");
     }
 }
