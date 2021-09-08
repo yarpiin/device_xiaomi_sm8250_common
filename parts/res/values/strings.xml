@@ -37,11 +37,6 @@
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
 
-    <!-- Touch Responsiveness -->
-    <string name="htsr_enable_title">Increase Touch Responsiveness</string>
-    <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>
-
-
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
     <string name="dirac_headset_title">Choose headphones type</string>
