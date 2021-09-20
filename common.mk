@@ -259,7 +259,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
 
 # Media
-$(call inherit-product, $(LOCAL_PATH)/kona/media/media.mk)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
@@ -267,6 +266,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
 
+PRODUCT_COPY_FILES += \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_kona.xml \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    hardware/qcom-caf/sm8250/media/conf_files/kona/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -305,6 +315,26 @@ PRODUCT_PACKAGES += \
     ls_nq_client \
     jcos_nq_client \
     vendor.nxp.hardware.nfc@2.0-service
+
+# OMX
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libc2dcolorconvert \
+    libOmxSwVdec \
+    libOmxSwVencMpeg4 \
+    libstagefrighthw \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libmm-omxcore \
+    libmm-omxcore \
+    init.qti.media.sh
     
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
