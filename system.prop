@@ -1,26 +1,13 @@
-#Audio
-ro.qc.sdk.audio.ssr=false
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.speaker=true
-tunnel.audio.encode = true
+# Audio
+persist.audio.button_jack.profile=volume
+persist.audio.button_jack.switch=0
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 
-# Blurs
-ro.surface_flinger.supports_background_blur=1
-ro.sf.blurs_are_expensive=1
-
-# Camera
-camera.disable_zsl_mode=true
-
-#Charger
-ro.charger.enable_suspend=true
-persist.vendor.cp.taper_term_mv=7000
-persist.vendor.cp.fcc_main_ua=400000
-persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
+# Charger
+ro.charger.disable_init_blank=true
 
 # Display
 debug.gralloc.gfx_ubwc_disable=0
