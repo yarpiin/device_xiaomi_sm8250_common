@@ -48,6 +48,9 @@ ro.vendor.qti.core_ctl_min_cpu=2
 
 # Radio
 ro.telephony.default_network=26,9
+persist.vendor.radio.report_codec=1
+ril.subscription.types=NV,RUIM
+ro.vendor.radio.features_common=3
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true

@@ -9,18 +9,18 @@ persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
 persist.vendor.audio.avs.afe_api_version=2
+ro.qc.sdk.audio.fluencetype=none
+ro.vendor.audio.sdk.fluencetype=fluence
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
-persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicecomm=true
-persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.hifi=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 ro.config.vc_call_vol_steps=11
-ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
@@ -264,6 +264,11 @@ persist.vendor.sensors.sync_request=true
 
 # Shutdown
 sys.vendor.shutdown.waittime=500
+
+# ULMK properties
+ro.lmk.use_minfree_levels=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
 
 # USB
 vendor.usb.diag.func.name=diag
