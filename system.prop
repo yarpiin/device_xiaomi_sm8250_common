@@ -16,6 +16,9 @@ ro.media.recorder-max-base-layer-fps=60
 # Pre-Rendering
 ro.vendor.perf.scroll_opt=true
 
+# Radio
+persist.sys.fflag.override.settings_provider_model=false
+
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
 persist.vendor.radio.report_codec=1
