@@ -355,6 +355,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
 
+PRODUCT_PACKAGES += \
+    libqti-perfd-client 
+
 # Power Hal
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
@@ -362,6 +365,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
