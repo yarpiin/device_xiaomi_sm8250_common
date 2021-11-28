@@ -568,18 +568,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@1.0::IQtiRadio/slot1</fqname>
         <fqname>@1.0::IQtiRadio/slot2</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
-        <version>2.4</version>
-        <interface>
-            <name>IQtiRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <fqname>@2.4::IQtiRadio/slot1</fqname>
-        <fqname>@2.4::IQtiRadio/slot2</fqname>
-    </hal>
+    <!-- IOP HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
