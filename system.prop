@@ -13,6 +13,9 @@ persist.dbg.wfc_avail_ovr=1
 mm.enable.smoothstreaming=true
 ro.media.recorder-max-base-layer-fps=60
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
 persist.vendor.radio.report_codec=1
