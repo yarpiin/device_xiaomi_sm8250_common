@@ -328,6 +328,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
+PRODUCT_PACKAGES += \
+    libqti-perfd-client 
+
 # Power Hal
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
@@ -335,6 +338,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# PowerStats
+PRODUCT_PACKAGES += \
+    android.hardware.power.stats@1.0-service.mock
 
 # QMI
 PRODUCT_PACKAGES += \
