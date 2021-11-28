@@ -3,7 +3,7 @@
         "remote"       : "github",
         "repository"   : "yarpiin/kernel_xiaomi_sm8250",
         "target_path"  : "kernel/xiaomi/sm8250",
-        "branch"       : "main"
+        "branch"       : "LA.UM.9.12.r1-XXXX-SMxx50.QSSI12.0"
     },
     { 
         "remote"       : "github",
@@ -15,25 +15,25 @@
         "remote"       : "github",
         "repository"   : "yarpiin/device_xiaomi_umi",
         "target_path"  : "device/xiaomi/umi",
-        "branch"       : "main"
+        "branch"       : "Snow"
     },
     { 
         "remote"       : "github",
         "repository"   : "yarpiin/device_xiaomi_cmi",
         "target_path"  : "device/xiaomi/cmi",
-        "branch"       : "main"
+        "branch"       : "Snow"
     },
     { 
         "remote"       : "gitlab",
         "repository"   : "yarpiin/vendor_xiaomi_umi",
         "target_path"  : "vendor/xiaomi/umi",
-        "branch"       : "main"
+        "branch"       : "Snow"
     },
     { 
         "remote"       : "gitlab",
         "repository"   : "yarpiin/vendor_xiaomi_cmi",
         "target_path"  : "vendor/xiaomi/cmi",
-        "branch"       : "main"
+        "branch"       : "Snow"
     },
     { 
         "remote"       : "gitlab",
@@ -51,6 +51,6 @@
         "remote"       : "github",
         "repository"   : "LineageOS/android_hardware_xiaomi",
         "target_path"  : "hardware/xiaomi",
-        "branch"       : "lineage-18.1"
+        "branch"       : "lineage-19.0"
     }
 ]
