@@ -14,22 +14,42 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/dirac_title">
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:defaultValue="false"
+        android:key="dirac_enable"
+        android:title="@string/dirac_enable" />
 
     <ListPreference
-        android:key="dirac_headset_pref"
+        android:defaultValue="0"
         android:entries="@array/dirac_headset_pref_entries"
         android:entryValues="@array/dirac_headset_pref_values"
-        android:defaultValue="0"
-        android:title="@string/dirac_headset_title"
-        android:summary="%s" />
+        android:key="dirac_headset_pref"
+        android:summary="%s"
+        android:title="@string/dirac_headset_title" />
 
     <ListPreference
-        android:key="dirac_preset_pref"
+        android:defaultValue="0,0,0,0,0,0,0"
         android:entries="@array/dirac_preset_pref_entries"
         android:entryValues="@array/dirac_preset_pref_values"
-        android:defaultValue="0,0,0,0,0,0,0"
-        android:title="@string/dirac_preset_title"
-        android:summary="%s" />
+        android:key="dirac_preset_pref"
+        android:summary="%s"
+        android:title="@string/dirac_preset_title" />
+
+
+    <PreferenceCategory
+        android:key="dirac_hifi"
+        android:title="@string/dirac_hifi_title">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="dirac_hifi_pref"
+            android:summary="@string/dirac_hifi_summary"
+            android:title="@string/dirac_hifi_enable_title" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

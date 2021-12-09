@@ -17,39 +17,51 @@
 package org.lineageos.settings.dirac;
 
 import android.content.Context;
-import android.util.Log;
+import android.media.AudioManager;
+
 
 public final class DiracUtils {
 
     protected static DiracSound mDiracSound;
-    private static final String TAG = "DiracUtils";
-    private static final boolean DEBUG = true;
+    private static boolean mInitialized;
+    private static Context mContext;
 
-    public static void initialize() {
-        if (mDiracSound == null)
+    public static void initialize(Context context) {
+        if (!mInitialized) {
+            mContext = context;
             mDiracSound = new DiracSound(0, 0);
+            mInitialized = true;
+        }
     }
 
     protected static void setMusic(boolean enable) {
-        if (DEBUG) Log.d(TAG, "setMusic(" + enable + ")");
         mDiracSound.setMusic(enable ? 1 : 0);
     }
 
-    protected static boolean isDiracEnabled(Context context) {
+    protected static boolean isDiracEnabled() {
         return mDiracSound != null && mDiracSound.getMusic() == 1;
     }
 
     protected static void setLevel(String preset) {
         String[] level = preset.split("\\s*,\\s*");
 
-        if (DEBUG) Log.d(TAG, "setLevel(" + preset + ")");
         for (int band = 0; band <= level.length - 1; band++) {
             mDiracSound.setLevel(band, Float.valueOf(level[band]));
         }
     }
 
     protected static void setHeadsetType(int paramInt) {
-         if (DEBUG) Log.d(TAG, "setHeadsetType(" + paramInt + ")");
-         mDiracSound.setHeadsetType(paramInt);
+        mDiracSound.setHeadsetType(paramInt);
+    }
+
+    protected static boolean getHifiMode() {
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        return audioManager.getParameters("hifi_mode").contains("true");
+    }
+
+    protected static void setHifiMode(int paramInt) {
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        audioManager.setParameters("hifi_mode=" + (paramInt == 1));
+        mDiracSound.setHifiMode(paramInt);
     }
 }

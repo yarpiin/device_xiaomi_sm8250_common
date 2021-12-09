@@ -1,2 +1,3 @@
-# Allow hal_bluetooth_default to read files in wifi_vendor_data_file
-r_dir_file(hal_bluetooth_default, wifi_vendor_data_file)
+# Allow Bluetooth hal to dump logs in /data/vendor/ssrdump/
+allow hal_bluetooth_default vendor_ramdump_vendor_data_file:dir create_dir_perms;
+allow hal_bluetooth_default vendor_ramdump_vendor_data_file:file create_file_perms;

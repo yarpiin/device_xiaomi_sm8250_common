@@ -15,38 +15,22 @@
      limitations under the License.
 -->
 <resources>
-     <!--    Device specific  -->
-    <string name="device_specific_settings_title">Device-specific settings</string>
-    <string name="device_specific_settings_summary">Settings specific to Mi 10</string>
-    <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
-    <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
-
-    <!--  DT2W    -->
-    <string name="dt2w_enable_title">Double-Tap to Wake </string>
-    <string name="dt2w_enable_summary">Display boot in screen-off state by a double-tap</string>
-
-    <!--Display settings fragment -->
-    <string name="display_settings_title">Custom Display Settings</string>
-    <string name="display_settings_summary">HBM</string>
-
-    <!-- Thermal Profiles -->
-    <string name="thermal_title">Thermal Profiles</string>
-    <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
-    <string name="thermal_default">Default</string>
-    <string name="thermal_benchmark">Benchmark</string>
-    <string name="thermal_browser">Browser</string>
-    <string name="thermal_camera">Camera</string>
-    <string name="thermal_dialer">Dialer</string>
-    <string name="thermal_gaming">Gaming</string>
-    <string name="thermal_streaming">Streaming</string>
+    <!-- Ambient settings -->
+    <string name="ambient_enable">Use ambient display</string>
 
     <!-- Dirac settings -->
-    <string name="dirac_title">Mi Sound Enhancer</string>
-    <string name="dirac_headset_title">Choose headphones type</string>
-    <string name="dirac_preset_title">Preset</string>
-    <string name="dirac_default">Default</string>
+    <string name="dirac_enable">Enable dirac</string>
+    <string name="dirac_title">Dirac sound enhancer</string>
+    <string name="dirac_headset_title">Headset type</string>
+    <string name="dirac_hifi_enable_title"> Enable Hi-fi</string>
+    <string name="dirac_preset_title">Sound preset</string>
 
-    <!-- Dirac settings: headset types -->
+    <!-- Dirac settings: Hi-Fi -->
+    <string name="dirac_hifi_title">Hi-Fi</string>
+    <string name="dirac_hifi_summary">Decrease noise and Distortion and increase audio quality</string>
+
+    <!-- Dirac settings: headset profiles -->
+    <string name="dirac_headset_default">Default</string>
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
     <string name="dirac_headset_piston_1">Mi Piston 1</string>
@@ -55,7 +39,7 @@
     <string name="dirac_headset_piston_basic">Basic Edition</string>
     <string name="dirac_headset_piston_2">Mi Piston 2</string>
     <string name="dirac_headset_piston_standard">Mi Piston 3</string>
-    <string name="dirac_headset_headphone">Mi Headphones</string>
+    <string name="dirac_headset_headphone">Mi Headphone</string>
     <string name="dirac_headset_piston_youth">Youth Edition</string>
     <string name="dirac_headset_piston_color">Color Edition</string>
     <string name="dirac_headset_in_ear">Mi In-Ear</string>
@@ -69,26 +53,17 @@
     <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
     <string name="dirac_headset_earphone">Mi Earphones</string>
 
-    <!-- TODO: change the string values accordingly -->
-    <string name="dirac_preset_0">Preset 0</string>
-    <string name="dirac_preset_1">Preset 1</string>
-    <string name="dirac_preset_2">Preset 2</string>
-    <string name="dirac_preset_3">Preset 3</string>
-
-    <!-- Dirac settings: equalizer presets -->
+    <!-- Dirac settings: presets -->
+    <string name="dirac_preset_default">Default</string>
     <string name="dirac_preset_rock">Rock</string>
     <string name="dirac_preset_jazz">Jazz</string>
     <string name="dirac_preset_pop">Pop</string>
     <string name="dirac_preset_classical">Classical</string>
-    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_hiphop">Hiphop</string>
     <string name="dirac_preset_blues">Blues</string>
     <string name="dirac_preset_electronic">Electronic</string>
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <!-- HBM settings -->
-    <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
-    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 </resources>

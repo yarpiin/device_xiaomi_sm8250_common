@@ -3,7 +3,6 @@ Common_CFlags += ["-Werror"]
 
 cc_library_shared {
     name: "vendor.qti.hardware.vibrator.impl.xiaomi_kona",
-    stem: "vendor.qti.hardware.vibrator.impl",
     vendor: true,
     cflags: Common_CFlags,
     srcs: [
@@ -13,16 +12,14 @@ cc_library_shared {
         "libcutils",
         "libutils",
         "liblog",
-        "libqtivibratoreffect",
         "libbinder_ndk",
-        "android.hardware.vibrator-ndk_platform",
+        "android.hardware.vibrator-V1-ndk_platform",
     ],
     export_include_dirs: ["include"]
 }
 
 cc_binary {
     name: "vendor.qti.hardware.vibrator.service.xiaomi_kona",
-    stem: "vendor.qti.hardware.vibrator.service",
     vendor: true,
     relative_install_path: "hw",
     init_rc: ["vendor.qti.hardware.vibrator.service.rc"],
@@ -38,7 +35,7 @@ cc_binary {
         "libutils",
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-ndk_platform",
-        "vendor.qti.hardware.vibrator.impl",
+        "android.hardware.vibrator-V1-ndk_platform",
+        "vendor.qti.hardware.vibrator.impl.xiaomi_kona",
     ],
 }
