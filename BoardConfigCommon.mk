@@ -89,6 +89,7 @@ TARGET_USES_DRM_PP := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_VULKAN := true
+BOARD_USES_ADRENO := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
