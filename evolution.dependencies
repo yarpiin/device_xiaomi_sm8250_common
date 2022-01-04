@@ -49,8 +49,8 @@
     },
     { 
         "remote"       : "github",
-        "repository"   : "LineageOS/android_hardware_xiaomi",
-        "target_path"  : "hardware/xiaomi",
-        "branch"       : "lineage-19.0"
+        "repository"   : "ArrowOS-Devices/android_device_xiaomi_extras",
+        "target_path"  : "device/xiaomi/extras",
+        "branch"       : "arrow-12.0"
     }
 ]
