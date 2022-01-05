@@ -1,4 +1,3 @@
 # Rule for vendor_thermal-engine to access init process
 unix_socket_connect(vendor_thermal-engine, property, init);
 
-set_prop(vendor_thermal-engine, thermal_normal_prop)
