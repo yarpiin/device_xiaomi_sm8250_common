@@ -16,12 +16,6 @@
 -->
 <resources>
 
-    <!-- Default value for proximity check on screen wake
-     NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
-    <bool name="config_proximityCheckOnWake">false</bool>
-    <integer name="config_proximityCheckTimeout">250</integer>
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
-
     <!-- Does the device have a notification led -->
     <bool name="config_hasNotificationLed">false</bool>
 
@@ -36,10 +30,6 @@
          Used to decide if we show pulse settings -->
     <bool name="config_ledCanPulse">false</bool>
 
-    <!-- Pocket Lock -->
-    <bool name="config_pocketModeSupported">true</bool>
-    <bool name="config_pocketUseLightSensor">false</bool>
-
     <!-- Whether to enable shifting of elements in the status bar and the navigation bar.
          Should be enabled for OLED devices to reduce/prevent burn in on the status bar
          and on the navigation bar and disabled for all other devices. -->
@@ -49,6 +39,5 @@
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
     <!-- Expected value from fast charging status file  -->
     <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
-
 
 </resources>
