@@ -210,6 +210,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOffloadConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.tetheroffload.control</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -592,6 +602,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.sensorscalibrate</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorsCalibrate</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISensorsCalibrate/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.slmadapter</name>
