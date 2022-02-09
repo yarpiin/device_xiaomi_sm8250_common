@@ -108,7 +108,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.memcg=1 \
-    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
     console=ttyMSM0,115200n8 \
