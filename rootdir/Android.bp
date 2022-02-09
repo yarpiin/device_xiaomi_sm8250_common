@@ -72,10 +72,3 @@ prebuilt_etc {
     src: "ueventd.qcom.rc",
     vendor: true,
 }
-
-prebuilt_etc {
-    name: "init.safailnet.rc",
-    src: "init.safailnet.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
