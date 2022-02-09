@@ -23,4 +23,4 @@ allow hal_sensors_default vendor_sysfs_touch:file rw_file_perms;
 
 # Allow Sensors hal to read and write to virtual touchpanel sysfs
 allow hal_sensors_default vendor_sysfs_tp_virtual_prox:file rw_file_perms;
-allow hal_sensors_default default_prop:file { read };
+allow hal_sensors_default default_prop:file { read getattr map open };
