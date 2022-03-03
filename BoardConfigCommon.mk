@@ -113,7 +113,6 @@ BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
     earlycon=msm_geni_serial,0xa90000 \
     loop.max_part=7 \
-    lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
     reboot=panic_warm \
     service_locator.enable=1 \
