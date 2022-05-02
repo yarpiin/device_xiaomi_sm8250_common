@@ -49,8 +49,8 @@
     },
     { 
         "remote"       : "github",
-        "repository"   : "ArrowOS-Devices/android_device_xiaomi_extras",
-        "target_path"  : "device/xiaomi/extras",
-        "branch"       : "arrow-12.0"
+        "repository"   : "xiaomi-sm8250-devs/android_hardware_xiaomi",
+        "target_path"  : "hardware/xiaomi",
+        "branch"       : "lineage-19.1"
     }
 ]
