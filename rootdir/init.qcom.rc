@@ -25,7 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
+import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
 
@@ -219,12 +221,6 @@ on boot
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
-    # Enable qcrild and data services
-    enable vendor.qcrild
-    enable vendor.qcrild2
-    enable vendor.dataqti
-    enable vendor.dataadpl
-
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -337,7 +333,15 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
+    #Create PERFD deamon related dirs
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
+
     mkdir /data/vendor/secure_element 0777 system system
+
+    #Create IOP  deamon related dirs
+    mkdir /data/vendor/iop 0700 root system
 
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
@@ -494,6 +498,17 @@ on property:vendor.netflix.bsp_rev=*
 on property:vendor.media.target_variant=*
     setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
+
+service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
+    class core
+    user root
+    oneshot
+
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
 
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
