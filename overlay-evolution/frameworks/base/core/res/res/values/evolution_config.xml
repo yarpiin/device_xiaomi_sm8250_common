@@ -40,4 +40,23 @@
     <!-- Expected value from fast charging status file  -->
     <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
 
+    <!-- Display mode remapping table.
+         If the mode names returned by the backend do not match
+         the predefined and translated strings in the Settings
+         app, they can be remapped here. The format is
+         "oldname:newname", one per entry. -->
+    <string-array name="config_displayModeMappings" translatable="false">
+        <item>Standard:Standard</item>
+        <item>enhanced:Enhanced</item>
+        <item>vivid:Vivid</item>
+        <item>warm:Warm</item>
+        <item>hal_native:Natural</item>
+        <item>hal_srgb:sRGB</item>
+        <item>expert_dcip3:DCI_P3</item>
+        <item>smart_MC:Adaptive</item>
+    </string-array>
+
+    <!-- Should we filter any display modes which are unmapped? -->
+    <bool name="config_filterDisplayModes">true</bool>
+
 </resources>
