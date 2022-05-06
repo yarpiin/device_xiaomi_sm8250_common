@@ -10,6 +10,9 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/request_vreg           
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable                 u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/vendor                        u:object_r:vendor_sysfs_fingerprint:s0
 
+# HBM
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                       u:object_r:vendor_sysfs_graphics:s0
+
 # Power_supply
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0055/power_supply                                                            u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0034/884000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply                    u:object_r:sysfs_power_supply:s0
@@ -85,3 +88,6 @@ genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup                       
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
+
+# FlickerFree
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                          u:object_r:vendor_sysfs_graphics:s0
