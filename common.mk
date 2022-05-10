@@ -445,6 +445,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.xiaomi
+
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
