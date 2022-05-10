@@ -56,6 +56,7 @@ on post-fs-data
 on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/touch/touch_dev/partial_diff_data
+    chown system system /sys/class/touch/touch_dev/bump_sample_rate
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
     chown system system /sys/class/drm/card0-DSI-1/disp_param
     chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
