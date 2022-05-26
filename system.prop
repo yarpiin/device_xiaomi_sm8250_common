@@ -7,6 +7,9 @@ ro.charger.enable_suspend=1
 # Display
 qemu.sf.lcd_density=380
 
+# GBoard Spacing
+ro.com.google.ime.kb_pad_port_b=1
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
