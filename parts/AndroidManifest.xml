@@ -57,6 +57,11 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
+        </service>
+        
         <activity
             android:name=".hbm.HBMActivity"
             android:label="@string/hbm_fragment_title"
