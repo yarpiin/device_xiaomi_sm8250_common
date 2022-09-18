@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiResCommon_Sys",
+    name: "WifiResCommon",
     product_specific: true,
 }
