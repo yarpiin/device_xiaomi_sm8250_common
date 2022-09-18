@@ -1,10 +1,56 @@
 [
-  {
-    "repository": "android_hardware_xiaomi",
-    "target_path": "hardware/xiaomi"
-  },
-  {
-    "repository": "android_kernel_xiaomi_sm8250",
-    "target_path": "kernel/xiaomi/sm8250"
-  }
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/kernel_xiaomi_sm8250",
+        "target_path"  : "kernel/xiaomi/sm8250",
+        "branch"       : "LA.UM.9.12.r1-XXXX-SMxx50.QSSI12.0-new"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/xiaomi_sm8250_common",
+        "target_path"  : "device/xiaomi/sm8250-common",
+        "branch"       : "EvolutionX_OSS_Tiramisu"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/device_xiaomi_umi",
+        "target_path"  : "device/xiaomi/umi",
+        "branch"       : "Tiramisu"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "yarpiin/device_xiaomi_cmi",
+        "target_path"  : "device/xiaomi/cmi",
+        "branch"       : "Tiramisu"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_umi",
+        "target_path"  : "vendor/xiaomi/umi",
+        "branch"       : "Tiramisu"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_cmi",
+        "target_path"  : "vendor/xiaomi/cmi",
+        "branch"       : "Tiramisu"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_umi_firmware",
+        "target_path"  : "vendor/xiaomi/umi/firmware",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "gitlab",
+        "repository"   : "yarpiin/vendor_xiaomi_cmi_firmware",
+        "target_path"  : "vendor/xiaomi/cmi/firmware",
+        "branch"       : "main"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "xiaomi-sm8250-devs/android_hardware_xiaomi",
+        "target_path"  : "hardware/xiaomi",
+        "branch"       : "lineage-19.1"
+    }
 ]
