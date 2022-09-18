@@ -155,7 +155,6 @@ persist.rcs.supported=0
 
 # RIL
 persist.radio.multisim.config=dsds
-persist.vendor.radio.5g_mode_pref=0
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.cdma_cap=false
 persist.vendor.radio.custom_ecc=1
