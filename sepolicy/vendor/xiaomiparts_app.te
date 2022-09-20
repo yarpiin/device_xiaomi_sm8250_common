@@ -10,4 +10,5 @@ allow xiaomiparts_app hint_service:service_manager find;
 allow xiaomiparts_app netstats_service:service_manager find;
 allow xiaomiparts_app thermal_service:service_manager find;
 allow xiaomiparts_app trust_service:service_manager find;
+allow xiaomiparts_app media_session_service:service_manager find;
 
