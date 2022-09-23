@@ -249,6 +249,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libminijail \
     libavservices_minijail \
     libavservices_minijail.vendor
 

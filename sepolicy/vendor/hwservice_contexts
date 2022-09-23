@@ -7,6 +7,9 @@ com.fingerprints.extension::IFingerprintCalibration                             
 com.fingerprints.extension::IFingerprintOptical                                      u:object_r:vendor_hal_xiaomi_fingerprint_hwservice:s0
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon              u:object_r:vendor_hal_xiaomi_fingerprint_hwservice:s0
 
+# Sensors
+vendor.xiaomi.hardware.citsensorservice::ICitSensorService                    u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
+
 # Touchfeature
 vendor.xiaomi.hardware.touchfeature::ITouchFeature                                   u:object_r:hal_touchfeature_hwservice:s0
 
