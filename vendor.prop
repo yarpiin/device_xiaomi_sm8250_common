@@ -76,6 +76,12 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
+# Blur
+ro.launcher.blur.appLaunch=0
+persist.sys.sf.disable_blurs=1
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.gyro.disable=0
@@ -85,10 +91,10 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 ro.vendor.display.sensortype=2
+vendor.display.use_layer_ext=0
 
 # DPM
 persist.vendor.dpm.feature=1
-persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
