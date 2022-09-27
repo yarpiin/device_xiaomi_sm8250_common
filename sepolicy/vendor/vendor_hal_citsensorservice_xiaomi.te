@@ -25,3 +25,7 @@ allow vendor_hal_citsensorservice_xiaomi_default input_device:chr_file rw_file_p
 allow vendor_hal_citsensorservice_xiaomi_default mnt_vendor_file:dir search;
 allow vendor_hal_citsensorservice_xiaomi_default vendor_sensors_prop:file read;
 
+allow vendor_hal_citsensorservice_xiaomi_default vendor_persist_sensors_file:dir search;
+allow vendor_hal_citsensorservice_xiaomi_default vendor_sensors_prop:file open;
+
+
