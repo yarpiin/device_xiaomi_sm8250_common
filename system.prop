@@ -5,6 +5,9 @@ persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com
 # Charger
 ro.charger.enable_suspend=1
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # GBoard Spacing
 ro.com.google.ime.kb_pad_port_b=1
 
