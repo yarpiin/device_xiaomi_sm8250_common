@@ -15,9 +15,6 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
-# Camera
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.pixelexperience.faceunlock
-
 # CNE
 persist.vendor.cne.feature=1
 
