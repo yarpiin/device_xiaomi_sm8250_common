@@ -28,6 +28,8 @@ allow vendor_hal_citsensorservice_xiaomi_default vendor_persist_sensors_file:dir
 allow vendor_hal_citsensorservice_xiaomi_default vendor_sensors_prop:file { read getattr open };
 allow vendor_hal_citsensorservice_xiaomi_default vendor_persist_sensors_file:file { getattr read write };
 
+allow vendor_hal_citsensorservice_xiaomi_default vendor_persist_sensors_file:dir write;
+allow vendor_hal_citsensorservice_xiaomi_default vendor_persist_sensors_file:file open;
 
 
 

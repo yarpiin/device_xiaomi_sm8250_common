@@ -11,6 +11,9 @@ allow hal_power_default {
 } rw_file_perms;
 
 allow hal_power_default sysfs_devices_system_cpu:file write;
+
 allow hal_power_default vendor_sysfs_devfreq:dir search;
-allow hal_power_default vendor_sysfs_kgsl:file write;
+allow hal_power_default vendor_sysfs_devfreq:file { open read write};
+allow hal_power_default vendor_sysfs_kgsl:file { open read write};
+
 
