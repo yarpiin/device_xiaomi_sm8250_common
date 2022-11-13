@@ -125,7 +125,7 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
     }
 
     void cancel() {
-        // nothing
+        set(DISPPARAM_PATH, DISPPARAM_FOD_HBM_OFF);
     }
   private:
     fingerprint_device_t *mDevice;
