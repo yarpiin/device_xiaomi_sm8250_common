@@ -321,14 +321,12 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
+    FaceUnlockServiceOverlay \
     FrameworksResCommon \
     SystemUIResCommon \
     SettingsResCommon \
     TelephonyResCommon \
-    WifiResCommon
-
-PRODUCT_PACKAGES += \
-    FrameworksResTarget \
+    WifiResCommon \
     WifiResTarget
 
 # Partitions
