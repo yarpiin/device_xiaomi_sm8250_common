@@ -24,7 +24,7 @@
 
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">true</bool>
-    <bool name="config_pocketUseLightSensor">true</bool>
+    <bool name="config_pocketUseLightSensor">false</bool>
 
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
