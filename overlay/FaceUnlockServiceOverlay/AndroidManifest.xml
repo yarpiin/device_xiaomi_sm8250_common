@@ -5,7 +5,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.pixelexperience.faceunlock.overlay.common">
+    package="org.pixelexperience.faceunlock.overlay.common"
+    android:allowBackup="false">
 
     <overlay
         android:isStatic="true"
