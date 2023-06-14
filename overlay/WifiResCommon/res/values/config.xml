@@ -73,4 +73,7 @@
     <!-- Channel list for softap 6G band. Empty means all channels -->
     <string name="config_wifiSoftap6gChannelList"></string>
 
+    <!-- boolean indicating whether or not to auto-upgrade band setting configuration to dual bands during cloud configuration restore when device supported -->
+    <bool name="config_wifiSoftapAutoUpgradeToBridgedConfigWhenSupported" translatable="false">false</bool>
+
 </resources>
